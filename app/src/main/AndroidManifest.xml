@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.silogood.shop">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".admin.admin_shoes.print.Admin_Shoes_Print"></activity>
+        <activity android:name=".admin.admin_acc.print.Admin_Acc_Print" />
+        <activity android:name=".admin.admin_clothes.print.Admin_Clothes_Print" />
+        <activity android:name=".user.user_shoes.serch.User_Shoes_Serch" />
+        <activity android:name=".user.user_shoes.order.User_Shoes_Order" />
+        <activity android:name=".user.user_clothes.serch.User_Clothes_Serch" />
+        <activity android:name=".user.user_clothes.order.User_Clothes_Order" />
+        <activity android:name=".user.user_acc.serch.User_Acc_Serch" />
+        <activity android:name=".user.user_acc.order.User_Acc_Order" />
+        <activity android:name=".admin.admin_shoes.input.Admin_Shoes_Input" />
+        <activity android:name=".admin.admin_shoes.change.Admin_Shoes_Change" />
+        <activity android:name=".admin.admin_clothes.input.Admin_Clothes_Input" />
+        <activity android:name=".admin.admin_clothes.change.Admin_Clothes_Change" />
+        <activity android:name=".admin.admin_acc.input.Admin_Acc_Input" />
+        <activity android:name=".admin.admin_acc.change.Admin_Acc_Change" />
+        <activity android:name=".ItemViewByAdmin" />
+        <activity android:name=".admin.admin_shoes.Admin_Shoes" />
+        <activity android:name=".admin.admin_clothes.Admin_Clothes" />
+        <activity android:name=".admin.admin_acc.Admin_Acc" />
+        <activity android:name=".user.user_acc.User_Acc" />
+        <activity android:name=".user.user_shoes.User_Shoes" />
+        <activity android:name=".user.user_clothes.User_Clothes" />
+        <activity android:name=".ItemViewByUser" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

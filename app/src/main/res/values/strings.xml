@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">shop</string>
+    <string name="app_label"> 재고관리 시스템 </string>
+</resources>
