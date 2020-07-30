@@ -7,6 +7,8 @@ import android.widget.ListView;
 
 import com.silogood.shop.R;
 import com.silogood.shop.databasemanager.AccNote;
+import com.silogood.shop.databasemanager.AllNote;
+import com.silogood.shop.databasemanager.All_NotesAdapter;
 import com.silogood.shop.databasemanager.ClothesNote;
 import com.silogood.shop.databasemanager.Clothes_NotesAdapter;
 import com.silogood.shop.databasemanager.DatabaseHelper;
@@ -21,13 +23,9 @@ public class Admin_PrintAll extends AppCompatActivity {
     private ListView mListView;
 
 
-    private ArrayList<ClothesNote> mClothes_list;
-    private ArrayList<ShoesNote> mShoes_list;
-    private ArrayList<AccNote>   mAcc_list;
+    private ArrayList<AllNote> mAll_list;
 
-    private ArrayList<ClothesNote> mAll_list;
-
-    private Clothes_NotesAdapter mAllItem_Adapter;
+    private All_NotesAdapter mAllItem_Adapter;
 
 
     @Override
@@ -37,13 +35,9 @@ public class Admin_PrintAll extends AppCompatActivity {
 
         mDatabaseHelper= new DatabaseHelper(this);
 
-        mAll_list = new ArrayList<ClothesNote>();
+        mAll_list = new ArrayList<AllNote>();
 
-        mClothes_list = new ArrayList<ClothesNote>();
-        mShoes_list = new ArrayList<ShoesNote>();
-        mAcc_list = new ArrayList<AccNote>();
-
-        mAllItem_Adapter = new Clothes_NotesAdapter(this,R.layout.custom_listview_item, mAll_list);
+        mAllItem_Adapter = new All_NotesAdapter(this,R.layout.custom_listview_item, mAll_list);
 
         mListView = (ListView)findViewById(R.id.admin_print_all_view_list);
         mListView.setAdapter(mAllItem_Adapter);
@@ -53,9 +47,6 @@ public class Admin_PrintAll extends AppCompatActivity {
 
     private void renew_list(){
 
-        mClothes_list.clear();
-        mShoes_list.clear();
-        mAcc_list.clear();
         mAll_list.clear();
 
         List<ClothesNote> clothesNoteList = mDatabaseHelper.getAllClothesNotes();
@@ -67,12 +58,21 @@ public class Admin_PrintAll extends AppCompatActivity {
         int a_index;
 
         for(c_index = 0; c_index < clothesNoteList.size(); c_index++){
-            mAll_list.add(clothesNoteList.get(c_index));
+
+            AllNote dummy =  new AllNote();
+            dummy.setPath("jaket");
+            dummy.setName(clothesNoteList.get(c_index).getName());
+            dummy.setCode(clothesNoteList.get(c_index).getCode());
+            dummy.setBqt(clothesNoteList.get(c_index).getBqt());
+            dummy.setTimestamp(clothesNoteList.get(c_index).getTimestamp());
+
+            mAll_list.add(dummy);
         }
 
         for(s_index = 0; s_index < shoesNoteList.size(); s_index++){
 
-            ClothesNote dummy =  new ClothesNote();
+            AllNote dummy =  new AllNote();
+            dummy.setPath("necklace");
             dummy.setName(shoesNoteList.get(s_index).getName());
             dummy.setCode(shoesNoteList.get(s_index).getCode());
             dummy.setBqt(shoesNoteList.get(s_index).getBqt());
@@ -83,7 +83,8 @@ public class Admin_PrintAll extends AppCompatActivity {
 
         for(a_index = 0; a_index < accNoteList.size(); a_index++){
 
-            ClothesNote dummy =  new ClothesNote();
+            AllNote dummy =  new AllNote();
+            dummy.setPath("sneaker");
             dummy.setName(accNoteList.get(a_index).getName());
             dummy.setCode(accNoteList.get(a_index).getCode());
             dummy.setBqt(accNoteList.get(a_index).getBqt());
