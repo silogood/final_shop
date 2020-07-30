@@ -19,8 +19,6 @@ public class ItemViewByAdmin extends AppCompatActivity {
     private Button AdminShoesBtn;
     private Button AdminAccBtn;
     private Button AdminInventoryAllPrintBtn;
-    private Button AdminBackBtn;
-    private Button AdminExitBtn;
     private String TAG = "ITEMVIEWBYADMIN";
 
     @Override
@@ -87,15 +85,7 @@ public class ItemViewByAdmin extends AppCompatActivity {
             }
         });
 
-        AdminBackBtn = (Button) findViewById(R.id.admin_back_btn);
-        AdminBackBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG,"BACK CLICK");
 
-                finish();
-            }
-        });
 
 
 

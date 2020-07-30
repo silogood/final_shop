@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class User_Clothes_History extends AppCompatActivity {
 
-    private String TAG = "History";
+    private String TAG = "HISTORY CLOTHES";
     private ListView mListView;
     private ArrayList<ClothesNote> mPurchaed_list;
     private Clothes_NotesAdapter mPurchaced_notesAdapter;

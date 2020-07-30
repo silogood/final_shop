@@ -1,11 +1,11 @@
 package com.silogood.shop.user.user_acc;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.silogood.shop.R;
 import com.silogood.shop.databasemanager.AccNote;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class User_Acc_History extends AppCompatActivity {
 
-    private String TAG = "History";
+    private String TAG = "HISTORY ACC";
     private ListView mListView;
     private ArrayList<AccNote> mPurchaed_list;
     private Acc_NotesAdapter mPurchaced_notesAdapter;

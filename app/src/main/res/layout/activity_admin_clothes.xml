@@ -18,19 +18,23 @@
         <EditText
             android:id="@+id/admin_clothes_edittxt_1"
             android:layout_width="match_parent"
-            android:hint="상품명"
+            android:hint="상품명을 입력하세요"
+            android:drawableLeft="@android:drawable/ic_menu_search"
             android:layout_height="wrap_content"
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="품번"
+            android:hint="품번을 입력하세요"
+            android:drawableLeft="@android:drawable/ic_menu_search"
             android:id="@+id/admin_clothes_edittxt_2"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="수량"
+            android:hint="수량을 입력하세요"
+            android:numeric="signed"
+            android:drawableLeft="@android:drawable/ic_menu_search"
             android:id="@+id/admin_clothes_edittxt_3"/>
 
         <LinearLayout

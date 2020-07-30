@@ -17,8 +17,6 @@ public class ItemViewByUser extends AppCompatActivity {
     private Button UserClothesBtn;
     private Button UserShoesBtn;
     private Button UserAccBtn;
-    private Button UserBackBtn;
-    private Button UserExitBtn;
     private String TAG = "ItemViewByUser";
 
     @Override
@@ -70,16 +68,6 @@ public class ItemViewByUser extends AppCompatActivity {
 
                 //TODO goto mainactivity
                 // finish();
-            }
-        });
-
-        UserBackBtn = (Button) findViewById(R.id.user_back_btn);
-        UserBackBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG,"BACK CLICK");
-
-                finish();
             }
         });
 

@@ -1,11 +1,11 @@
 package com.silogood.shop.user.user_shoes;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.silogood.shop.R;
 import com.silogood.shop.databasemanager.ShoesNote;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class User_Shoes_History extends AppCompatActivity {
 
-    private String TAG = "History";
+    private String TAG = "HISTORY SHOES";
     private ListView mListView;
     private ArrayList<ShoesNote> mPurchaed_list;
     private Shoes_NotesAdapter mPurchaced_notesAdapter;

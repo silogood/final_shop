@@ -19,43 +19,31 @@
             android:id="@+id/admin_clothes_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="110dp"
             android:text="Clothes" />
 
         <Button
             android:id="@+id/admin_shoes_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="110dp"
             android:text="Shoes" />
 
         <Button
             android:id="@+id/admin_acc_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="110dp"
             android:text="Acc" />
 
         <Button
             android:id="@+id/admin_inventory_all_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="110dp"
             android:text="Inventory All Print" />
 
-        <Button
-            android:id="@+id/admin_back_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="돌아가기" />
 
-        <Button
-            android:id="@+id/admin_exit_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Service Exit" />
 
 
     </LinearLayout>

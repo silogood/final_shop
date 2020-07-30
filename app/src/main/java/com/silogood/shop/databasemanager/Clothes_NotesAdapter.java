@@ -75,7 +75,7 @@ public class Clothes_NotesAdapter extends BaseAdapter {
         {
             viewHolder = (NoteViewHolder) convertView.getTag();
         }
-
+        viewHolder.icon.setBackgroundResource(R.drawable.jaket);
         viewHolder.name.setText("상품명 : "+mItemList.get(position).getName());
         viewHolder.code.setText("품번 : "+ mItemList.get(position).getCode());
         viewHolder.bqt.setText("수량 : "+ String.valueOf(mItemList.get(position).getBqt()));

@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.silogood.shop.databasemanager.AccNote;
 import com.silogood.shop.databasemanager.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
