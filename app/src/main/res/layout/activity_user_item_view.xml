@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ripple_custom"
     tools:context=".ItemViewByUser">
 
     <LinearLayout
@@ -20,21 +21,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:text="Clothes" />
+            android:text="상의, 하의" />
 
         <Button
             android:id="@+id/user_shoes_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:text="Shoes" />
+            android:text="신발" />
 
         <Button
             android:id="@+id/user_acc_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:text="Acc" />
+            android:text="악세사리" />
 
 
     </LinearLayout>

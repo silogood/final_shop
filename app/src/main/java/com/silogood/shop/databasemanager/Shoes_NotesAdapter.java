@@ -71,7 +71,7 @@ public class Shoes_NotesAdapter extends BaseAdapter {
         viewHolder.icon.setBackgroundResource(R.drawable.sneaker);
         viewHolder.name.setText("상품명 : "+mItemList.get(position).getName());
         viewHolder.code.setText("품번 : "+ mItemList.get(position).getCode());
-        viewHolder.bqt.setText("수량 : "+ String.valueOf(mItemList.get(position).getBqt()));
+        viewHolder.bqt.setText("재고 수량 : "+ String.valueOf(mItemList.get(position).getBqt())+"개");
         viewHolder.timestamp.setText(mItemList.get(position).getTimestamp());
         notifyDataSetChanged();
         return convertView;

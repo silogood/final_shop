@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void init_view()
     {
+
         userBtn = (Button) findViewById(R.id.user_btn);
         userBtn.setOnClickListener(new View.OnClickListener() {
             @Override
