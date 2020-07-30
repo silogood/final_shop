@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ripple_custom"
+
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -21,7 +23,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
 
-            android:text="로그인"
+            android:text="회원가입, 로그인 미구현"
             android:textColor="#D30000">
 
         </TextView>
@@ -30,13 +32,13 @@
             android:id="@+id/user_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:text="회원" />
         <Button
             android:id="@+id/admin_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="80dp"
             android:text="관리자" />
     </LinearLayout>
 

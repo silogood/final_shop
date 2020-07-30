@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    android:background="@drawable/ripple_custom"
     tools:context=".ItemViewByAdmin">
 
     <LinearLayout
@@ -20,28 +21,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
-            android:text="Clothes" />
+            android:text="상의, 하의" />
 
         <Button
             android:id="@+id/admin_shoes_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
-            android:text="Shoes" />
+            android:text="신발" />
 
         <Button
             android:id="@+id/admin_acc_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
-            android:text="Acc" />
+            android:text="악세사리" />
 
         <Button
             android:id="@+id/admin_inventory_all_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
-            android:text="Inventory All Print" />
+            android:text="전 품목 재고 현황" />
 
 
 
