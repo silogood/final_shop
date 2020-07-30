@@ -16,16 +16,16 @@
         >
 
         <EditText
-            android:id="@+id/user_clothes_edittxt_1"
+            android:id="@+id/admin_clothes_edittxt_1"
             android:layout_width="match_parent"
-            android:hint="상품"
+            android:hint="상품명"
             android:layout_height="wrap_content"
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="코드"
+            android:hint="품번"
             android:id="@+id/admin_clothes_edittxt_2"/>
         <EditText
             android:layout_width="match_parent"
@@ -47,14 +47,14 @@
                 android:text="추가" />
 
             <Button
-                android:id="@+id/user_clothes_purchace_btn"
+                android:id="@+id/admin_clothes_purchace_btn"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:text="삭제" />
 
             <Button
-                android:id="@+id/user_clothes_go_history_btn"
+                android:id="@+id/admin_clothes_go_history_btn"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
@@ -65,7 +65,7 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/user_clothes_listview">
+            android:id="@+id/admin_clothes_listview">
 
         </ListView>
 

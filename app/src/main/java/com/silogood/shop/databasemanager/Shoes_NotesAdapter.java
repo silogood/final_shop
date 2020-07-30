@@ -8,11 +8,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.silogood.shop.R;
 
 import java.util.ArrayList;
 
 public class Shoes_NotesAdapter extends BaseAdapter {
+
     private Context mContext;
     private LayoutInflater mInflater;
     private ArrayList<ShoesNote> mItemList;
@@ -26,15 +28,20 @@ public class Shoes_NotesAdapter extends BaseAdapter {
         this.mInflater = (LayoutInflater) context.getSystemService
                 (Context.LAYOUT_INFLATER_SERVICE);
     }
+    @Override
+    public int getCount() {
+        return mItemList.size();
+    }
 
     @Override
-    public int getCount() { return mItemList.size(); }
+    public Object getItem(int position) {
+        return mItemList.get(position);
+    }
 
     @Override
-    public Object getItem(int position) { return mItemList.get(position); }
-
-    @Override
-    public long getItemId(int position) { return position; }
+    public long getItemId(int position) {
+        return position;
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -53,6 +60,7 @@ public class Shoes_NotesAdapter extends BaseAdapter {
             viewHolder.timestamp = (TextView) convertView.findViewById(R.id.timestemp);
 
             convertView.setTag(viewHolder);
+            notifyDataSetChanged();
         }
         // 캐시된 뷰가 있을 경우 저장된 뷰홀더를 사용한다
         else
@@ -60,12 +68,12 @@ public class Shoes_NotesAdapter extends BaseAdapter {
             viewHolder = (Shoes_NotesAdapter.NoteViewHolder) convertView.getTag();
         }
 
-        viewHolder.icon.setBackgroundResource(R.drawable.shoes);
-        viewHolder.name.setText("상품 : "+mItemList.get(position).getName());
-        viewHolder.code.setText("코드 : "+ mItemList.get(position).getCode());
+        viewHolder.icon.setBackgroundResource(R.drawable.shirts);
+        viewHolder.name.setText("상품명 : "+mItemList.get(position).getName());
+        viewHolder.code.setText("품번 : "+ mItemList.get(position).getCode());
         viewHolder.bqt.setText("수량 : "+ String.valueOf(mItemList.get(position).getBqt()));
         viewHolder.timestamp.setText(mItemList.get(position).getTimestamp());
-
+        notifyDataSetChanged();
         return convertView;
 
     }

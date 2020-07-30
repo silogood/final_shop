@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.silogood.shop.R;
 
+import com.silogood.shop.databasemanager.AccNote;
 import com.silogood.shop.databasemanager.ClothesNote;
 import com.silogood.shop.databasemanager.Clothes_NotesAdapter;
 import com.silogood.shop.databasemanager.DatabaseHelper;
@@ -54,7 +55,7 @@ public class Admin_Clothes extends AppCompatActivity {
         mClothes_notesAdapter = new Clothes_NotesAdapter(this,R.layout.custom_listview_item, mClothes_list);
 
 
-        mEditText_Product = (EditText)findViewById(R.id.user_clothes_edittxt_1);
+        mEditText_Product = (EditText)findViewById(R.id.admin_clothes_edittxt_1);
 
         mEditText_Code = (EditText)findViewById(R.id.admin_clothes_edittxt_2) ;
 
@@ -76,7 +77,7 @@ public class Admin_Clothes extends AppCompatActivity {
             }
         });
 
-        mDelBtn = (Button)findViewById(R.id.user_clothes_purchace_btn);
+        mDelBtn = (Button)findViewById(R.id.admin_clothes_purchace_btn);
         mDelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +90,7 @@ public class Admin_Clothes extends AppCompatActivity {
             }
         });
 
-        mModifyBtn = (Button)findViewById(R.id.user_clothes_go_history_btn);
+        mModifyBtn = (Button)findViewById(R.id.admin_clothes_go_history_btn);
         mModifyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,12 +108,16 @@ public class Admin_Clothes extends AppCompatActivity {
             }
         });
 
-        mListView = (ListView)findViewById(R.id.user_clothes_listview);
+        mListView = (ListView)findViewById(R.id.admin_clothes_listview);
         mListView.setAdapter(mClothes_notesAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //List Item click
+                ClothesNote selected_item = (ClothesNote) parent.getItemAtPosition(position);
+                mEditText_Product.setText(selected_item.getName());
+                mEditText_Code.setText(selected_item.getCode());
+                mEditText_Bqt.setText(Integer.toString(selected_item.getBqt()));
             }
         });
 

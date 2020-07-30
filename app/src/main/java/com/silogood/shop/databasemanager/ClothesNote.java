@@ -5,6 +5,7 @@ import android.os.Parcelable;
 import java.io.Serializable;
 
 public class ClothesNote implements Serializable {
+
     public static final String TABLE_NAME_CLOTHES = "clothes";
 
     public static final String COLUMN_NAME = "name";

@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,11 +14,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-import com.silogood.shop.MainActivity;
 import com.silogood.shop.R;
 import com.silogood.shop.databasemanager.ClothesNote;
 import com.silogood.shop.databasemanager.Clothes_NotesAdapter;
 import com.silogood.shop.databasemanager.DatabaseHelper;
+import com.silogood.shop.user.user_acc.User_Acc;
+import com.silogood.shop.user.user_acc.User_Acc_History;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -94,10 +94,14 @@ public class User_Clothes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(User_Clothes.this,History.class);
-                intent.putExtra("purchaced",mPurchaed_list);
+                if(mPurchaed_list.size() != 0) {
+                    Intent intent = new Intent(User_Clothes.this, User_Clothes_History.class);
+                    intent.putExtra("purchaced", mPurchaed_list);
 
-                startActivity(intent);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(User_Clothes.this, "구매 목록이 없습니다.", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

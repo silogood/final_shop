@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.admin_clothes.Admin_Clothes">
+    tools:context=".user.user_clothes.User_Clothes">
 
     <LinearLayout
         android:layout_width="409dp"
