@@ -21,12 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
     private String TAG = "MainActivity";
     private Context mContext;
+    //check update
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = MainActivity.this;
+        
+        mContext = this;
 
         init_view();
 
