@@ -28,34 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = MainActivity.this;
-        
-        mContext = this;
+
 
         init_view();
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
-
-        //insert test
- /*       databaseHelper.setInsertNote("clothes","지방시 후드", "1", 10);
-        databaseHelper.setInsertNote("clothes","버버리 후드", "2", 40);
-        databaseHelper.setInsertNote("clothes","코트 1", "3", 19);
-        databaseHelper.setInsertNote("clothes","코트 2", "4", 11);
-        databaseHelper.setInsertNote("clothes","코트 3", "5", 75);
-        databaseHelper.setInsertNote("clothes","발망 티 ", "6", 35);
-        databaseHelper.setInsertNote("shoes","구찌 스니커즈", "7", 62);
-        databaseHelper.setInsertNote("shoes","커먼 프로젝트 스니커즈", "8", 25);
-        databaseHelper.setInsertNote("acc","스냅 백", "9", 24);
-        databaseHelper.setInsertNote("acc","크로스 백", "10", 32);
-*/
-        //get db
-       /* databaseHelper.getAccNode(1);
-        databaseHelper.getClothesNote(0);
-        databaseHelper.getShoesNote(1);*/
-
-        //update..
-
-        //delete..
-
+        
 
 
     }
