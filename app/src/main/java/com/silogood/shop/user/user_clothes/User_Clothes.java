@@ -18,8 +18,6 @@ import com.silogood.shop.R;
 import com.silogood.shop.databasemanager.ClothesNote;
 import com.silogood.shop.databasemanager.Clothes_NotesAdapter;
 import com.silogood.shop.databasemanager.DatabaseHelper;
-import com.silogood.shop.user.user_acc.User_Acc;
-import com.silogood.shop.user.user_acc.User_Acc_History;
 
 import java.util.ArrayList;
 import java.util.Date;

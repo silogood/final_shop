@@ -19,36 +19,23 @@
             android:id="@+id/user_clothes_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="150dp"
             android:text="Clothes" />
 
         <Button
             android:id="@+id/user_shoes_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="150dp"
             android:text="Shoes" />
 
         <Button
             android:id="@+id/user_acc_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="150dp"
             android:text="Acc" />
 
-        <Button
-            android:id="@+id/user_back_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="돌아가기" />
-
-        <Button
-            android:id="@+id/user_exit_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Service Exit" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

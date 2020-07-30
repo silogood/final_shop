@@ -18,10 +18,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
 
-            android:text="(주)골드만샀어"
+            android:text="로그인"
             android:textColor="#D30000">
 
         </TextView>

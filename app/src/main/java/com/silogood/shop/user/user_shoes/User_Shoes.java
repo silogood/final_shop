@@ -13,12 +13,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
 import com.silogood.shop.R;
 import com.silogood.shop.databasemanager.ShoesNote;
 import com.silogood.shop.databasemanager.Shoes_NotesAdapter;
 import com.silogood.shop.databasemanager.DatabaseHelper;
-import com.silogood.shop.user.user_acc.User_Acc;
 
 import java.util.ArrayList;
 import java.util.Date;

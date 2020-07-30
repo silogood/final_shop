@@ -19,7 +19,9 @@
             android:id="@+id/user_acc_edittxt_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="수량" />
+            android:numeric="signed"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:hint="구매하실 수량을 입력하세요" />
 
         <LinearLayout
             android:layout_width="match_parent"
