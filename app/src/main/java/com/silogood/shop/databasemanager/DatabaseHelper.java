@@ -63,6 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         long id = 0;
+
         if( type == CLOTHES ){
             values.put(ClothesNote.COLUMN_NAME, name);
             values.put(ClothesNote.COLUMN_CODE, code);
@@ -79,28 +80,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(AccNote.COLUMN_BQT,bqt);
              id = db.insert(AccNote.TABLE_NAME_ACC, null, values);
         }
+
         db.close();
         return id;
     }
 
-    public ClothesNote getClothesNote(long id) {
+    public ClothesNote getClothesNote(String code) {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(ClothesNote.TABLE_NAME_CLOTHES,
-                new String[]{ClothesNote.COLUMN_ID, ClothesNote.COLUMN_NAME, ClothesNote.COLUMN_CODE, ClothesNote.COLUMN_BQT, ClothesNote.COLUMN_TIMESTAMP},
-                ClothesNote.COLUMN_ID + "=?",
-                new String[]{String.valueOf(id)}, null, null, null, null);
+                new String[]{ClothesNote.COLUMN_NAME, ClothesNote.COLUMN_CODE, ClothesNote.COLUMN_BQT, ClothesNote.COLUMN_TIMESTAMP},
+                ClothesNote.COLUMN_CODE + "=?",
+                new String[]{code}, null, null, null, null);
 
 
+        if(cursor.getCount() ==  0) {
+            Log.d(TAG, "#### SILOGOOD cursor.getCount = 0 ");
+            ClothesNote note_null = new ClothesNote(
+                     " ", " ",-1, "");
+            return note_null;
+        }
         if (cursor != null) {
             cursor.moveToFirst();
+        }else{
+            cursor.close();
         }
 
         // prepare note object
 
         ClothesNote note = new ClothesNote(
-                cursor.getInt(cursor.getColumnIndex(ClothesNote.COLUMN_ID)),
                 cursor.getString(cursor.getColumnIndex(ClothesNote.COLUMN_NAME)),
                 cursor.getString(cursor.getColumnIndex(ClothesNote.COLUMN_CODE)),
                 cursor.getInt(cursor.getColumnIndex(ClothesNote.COLUMN_BQT)),
@@ -179,7 +188,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 ClothesNote note = new ClothesNote();
-                note.setId(cursor.getInt(cursor.getColumnIndex(ClothesNote.COLUMN_ID)));
                 note.setName(cursor.getString(cursor.getColumnIndex(ClothesNote.COLUMN_NAME)));
                 note.setCode(cursor.getString(cursor.getColumnIndex(ClothesNote.COLUMN_CODE)));
                 note.setBqt(cursor.getInt(cursor.getColumnIndex(ClothesNote.COLUMN_BQT)));
@@ -295,15 +303,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public int updateClothesNote(ClothesNote note) {
+
+    public int updateClothesNoteBycode(ClothesNote note) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(ClothesNote.COLUMN_NAME, note.getName());
+        values.put(ClothesNote.COLUMN_BQT,note.getBqt());
+        values.put(ClothesNote.COLUMN_TIMESTAMP,note.getTimestamp());
 
         // updating row
-        return db.update(ClothesNote.TABLE_NAME_CLOTHES, values, ClothesNote.COLUMN_ID + " = ?",
-                new String[]{String.valueOf(note.getId())});
+        return db.update(ClothesNote.TABLE_NAME_CLOTHES, values, ClothesNote.COLUMN_CODE + " = ?",
+                new String[]{note.getCode()});
     }
 
     public int updateShoesNote(ShoesNote note) {
@@ -331,8 +342,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void deleteClothesNote(ClothesNote note) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(ClothesNote.TABLE_NAME_CLOTHES, ClothesNote.COLUMN_ID + " = ?",
-                new String[]{String.valueOf(note.getId())});
+        db.delete(ClothesNote.TABLE_NAME_CLOTHES, ClothesNote.COLUMN_CODE + " = ?",
+                new String[]{note.getCode()});
+        db.close();
+    }
+
+    public void deleteClothesNotebyname(String code) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        int result = db.delete(ClothesNote.TABLE_NAME_CLOTHES, ClothesNote.COLUMN_CODE + " = ?",
+                new String[]{code});
+        Log.d(TAG,"###SILOGOOD result : "+result);
         db.close();
     }
 

@@ -21,7 +21,7 @@ public class AccNote {
             "CREATE TABLE " + TABLE_NAME_ACC + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_NAME + " TEXT,"
-                    + COLUMN_CODE + " TEXT,"
+                    + COLUMN_CODE + " TEXT UNIQUE,"
                     + COLUMN_BQT + " INTEGER,"
                     + COLUMN_TIMESTAMP + " DATETIME DEFAULT CURRENT_TIMESTAMP"
                     + ")";

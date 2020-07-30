@@ -62,6 +62,7 @@ public class Clothes_NotesAdapter extends BaseAdapter {
             viewHolder.timestamp = (TextView) convertView.findViewById(R.id.timestemp);
 
             convertView.setTag(viewHolder);
+            notifyDataSetChanged();
         }
         // 캐시된 뷰가 있을 경우 저장된 뷰홀더를 사용한다
         else
@@ -74,7 +75,7 @@ public class Clothes_NotesAdapter extends BaseAdapter {
         viewHolder.code.setText("코드 : "+ mItemList.get(position).getCode());
         viewHolder.bqt.setText("수량 : "+ String.valueOf(mItemList.get(position).getBqt()));
         viewHolder.timestamp.setText(mItemList.get(position).getTimestamp());
-
+        notifyDataSetChanged();
         return convertView;
 
     }

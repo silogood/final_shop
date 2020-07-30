@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.silogood.shop.admin.Admin_PrintAll;
 import com.silogood.shop.admin.admin_acc.Admin_Acc;
 import com.silogood.shop.admin.admin_clothes.Admin_Clothes;
 import com.silogood.shop.admin.admin_shoes.Admin_Shoes;
@@ -78,13 +79,11 @@ public class ItemViewByAdmin extends AppCompatActivity {
         AdminInventoryAllPrintBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"SHOES CLICK");
+                Log.d(TAG,"Print All");
 
-                Intent intent = new Intent(ItemViewByAdmin.this , ItemViewByAdmin.class);
+                Intent intent = new Intent(ItemViewByAdmin.this , Admin_PrintAll.class);
                 startActivity(intent);
 
-                //TODO goto mainactivity
-                // finish();
             }
         });
 

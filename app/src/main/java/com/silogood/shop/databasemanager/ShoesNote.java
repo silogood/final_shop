@@ -1,6 +1,6 @@
 package com.silogood.shop.databasemanager;
 
-public class ShoesNote {
+public class ShoesNote  {
     public static final String TABLE_NAME_SHOES = "shoes";
 
     public static final String COLUMN_ID = "id";
@@ -21,7 +21,7 @@ public class ShoesNote {
             "CREATE TABLE " + TABLE_NAME_SHOES + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_NAME + " TEXT,"
-                    + COLUMN_CODE + " TEXT,"
+                    + COLUMN_CODE + " TEXT UNIQUE,"
                     + COLUMN_BQT + " INTEGER,"
                     + COLUMN_TIMESTAMP + " DATETIME DEFAULT CURRENT_TIMESTAMP"
                     + ")";

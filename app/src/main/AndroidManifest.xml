@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin.admin_shoes.print.Admin_Shoes_Print"></activity>
+        <activity android:name=".admin.Admin_PrintAll"></activity>
+        <activity android:name=".user.user_clothes.History" />
+        <activity android:name=".admin.admin_shoes.print.Admin_Shoes_Print" />
         <activity android:name=".admin.admin_acc.print.Admin_Acc_Print" />
         <activity android:name=".admin.admin_clothes.print.Admin_Clothes_Print" />
         <activity android:name=".user.user_shoes.serch.User_Shoes_Serch" />
