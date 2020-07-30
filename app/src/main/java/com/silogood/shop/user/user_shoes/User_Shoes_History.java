@@ -1,24 +1,24 @@
-package com.silogood.shop.user.user_clothes;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.silogood.shop.user.user_shoes;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.silogood.shop.R;
-import com.silogood.shop.databasemanager.ClothesNote;
-import com.silogood.shop.databasemanager.Clothes_NotesAdapter;
+import com.silogood.shop.databasemanager.ShoesNote;
+import com.silogood.shop.databasemanager.Shoes_NotesAdapter;
 
 import java.util.ArrayList;
 
-public class History extends AppCompatActivity {
+public class User_Shoes_History extends AppCompatActivity {
 
     private String TAG = "History";
     private ListView mListView;
-    private ArrayList<ClothesNote> mPurchaed_list;
-    private Clothes_NotesAdapter mPurchaced_notesAdapter;
+    private ArrayList<ShoesNote> mPurchaed_list;
+    private Shoes_NotesAdapter mPurchaced_notesAdapter;
     private Intent mIntent;
 
     @Override
@@ -26,14 +26,14 @@ public class History extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
         mIntent = getIntent();
-        ArrayList<ClothesNote> cn =  (ArrayList<ClothesNote>) mIntent.getSerializableExtra("purchaced");
-        //ArrayList<ClothesNote> cn =  (ArrayList<ClothesNote>) mIntent.getExtras().getSerializable("purchaced");
+        ArrayList<ShoesNote> cn =  (ArrayList<ShoesNote>) mIntent.getSerializableExtra("purchaced");
+        //ArrayList<ShoesNote> cn =  (ArrayList<ShoesNote>) mIntent.getExtras().getSerializable("purchaced");
 
         Log.d(TAG,"#SILOGOOD CN.GET(0).GETnAME : "+cn.get(0).getName());
 
-        mPurchaed_list = new ArrayList<ClothesNote>();
+        mPurchaed_list = new ArrayList<ShoesNote>();
 
-        mPurchaced_notesAdapter = new Clothes_NotesAdapter(this,R.layout.custom_listview_item, mPurchaed_list);
+        mPurchaced_notesAdapter = new Shoes_NotesAdapter(this,R.layout.custom_listview_item, mPurchaed_list);
 
         mListView = (ListView)findViewById(R.id.purchaced_listview);
         mListView.setAdapter(mPurchaced_notesAdapter);

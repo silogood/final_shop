@@ -15,42 +15,41 @@
         tools:ignore="MissingConstraints"
         >
 
-        <Button
-            android:id="@+id/user_clothes_list_btn"
+        <EditText
+            android:id="@+id/user_shoes_edittxt_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="신발 재고 목록" />
+            android:hint="수량" />
 
-        <Button
-            android:id="@+id/user_shoes_serch_btn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="신발 재고 검색" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/user_shoes_order_btn"
+            <Button
+                android:id="@+id/user_shoes_purchace_btn"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:text="구매" />
+
+            <Button
+                android:id="@+id/user_shoes_go_history_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:text="구매내역 가기"></Button>
+
+        </LinearLayout>
+
+        <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="신발 발주" />
+            android:layout_height="match_parent"
+            android:id="@+id/user_shoes_listview">
 
-        <Button
-            android:id="@+id/user_oder_list_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="신발 발주 내역" />
-
-        <Button
-            android:id="@+id/user_exit_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="돌아가기" />
-
-
+        </ListView>
 
     </LinearLayout>
 

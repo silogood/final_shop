@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         init_view();
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
-        
+
 
 
     }

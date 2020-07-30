@@ -59,8 +59,8 @@ public class Admin_PrintAll extends AppCompatActivity {
         mAll_list.clear();
 
         List<ClothesNote> clothesNoteList = mDatabaseHelper.getAllClothesNotes();
-        List<ShoesNote> shoesNoteList = mDatabaseHelper.getAllShoesNote();
-        List<AccNote> accNoteList = mDatabaseHelper.getAllAccNote();
+        List<ShoesNote> shoesNoteList = mDatabaseHelper.getAllShoesNotes();
+        List<AccNote> accNoteList = mDatabaseHelper.getAllAccNotes();
 
         int c_index;
         int s_index;
