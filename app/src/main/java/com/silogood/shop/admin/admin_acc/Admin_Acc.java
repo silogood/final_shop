@@ -23,7 +23,7 @@ import java.util.List;
 
 public class Admin_Acc extends AppCompatActivity {
     
-    private String TAG = "ADMIN_ACC";
+    private String TAG = "ADMIN ACC";
 
     private DatabaseHelper mDatabaseHelper;
 
@@ -74,6 +74,8 @@ public class Admin_Acc extends AppCompatActivity {
                 mAcc_NotesAdapter.notifyDataSetChanged();
             }
         });
+
+
 
         mDelBtn = (Button)findViewById(R.id.admin_acc_purchace_btn);
         mDelBtn.setOnClickListener(new View.OnClickListener() {

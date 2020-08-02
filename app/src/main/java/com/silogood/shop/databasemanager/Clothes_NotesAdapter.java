@@ -27,6 +27,7 @@ public class Clothes_NotesAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private ArrayList<ClothesNote> mItemList;
     private int mLayout;
+    private  String TAG = "CLOTHES NOTES ADAPTER";
 
     public Clothes_NotesAdapter(Context context, int layout, ArrayList<ClothesNote> itemList)
     {

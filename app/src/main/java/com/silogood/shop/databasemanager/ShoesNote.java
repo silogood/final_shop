@@ -18,6 +18,7 @@ public class ShoesNote  {
     private int bqt;
     private String timestamp;
 
+    private  String TAG = "SHOES NOTE";
 
     // Create table SQL query
     public static final String CREATE_TABLE_SHOES =

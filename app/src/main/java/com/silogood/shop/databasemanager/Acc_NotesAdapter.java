@@ -18,6 +18,7 @@ public class Acc_NotesAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private ArrayList<AccNote> mItemList;
     private int mLayout;
+    private  String TAG = "ACC NOTES ADAPTER";
 
     public Acc_NotesAdapter(Context context, int layout, ArrayList<AccNote> itemList)
     {

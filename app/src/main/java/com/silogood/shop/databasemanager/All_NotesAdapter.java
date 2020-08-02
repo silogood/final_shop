@@ -26,6 +26,8 @@ public class All_NotesAdapter extends BaseAdapter {
     private int mLayout;
     private Drawable mDrawable;
 
+    private  String TAG = "ALL NOTESADAPTER";
+
     public All_NotesAdapter(Context context, int layout, ArrayList<AllNote> itemList)
     {
         this.mContext = context;

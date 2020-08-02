@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class User_Acc_History extends AppCompatActivity {
 
-    private String TAG = "HISTORY ACC";
+    private String TAG = "USER ACC HISTORY";
     private ListView mListView;
     private ArrayList<AccNote> mPurchaed_list;
     private Acc_NotesAdapter mPurchaced_notesAdapter;

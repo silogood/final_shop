@@ -24,7 +24,7 @@ import java.util.List;
 public class Admin_Clothes extends AppCompatActivity {
 
 
-    private String TAG = "ADMIN_CLOTHES";
+    private String TAG = "ADMIN CLOTHES";
 
     private DatabaseHelper mDatabaseHelper;
 

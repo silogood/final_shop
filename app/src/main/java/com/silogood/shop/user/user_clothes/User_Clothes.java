@@ -26,7 +26,7 @@ import java.util.List;
 
 public class User_Clothes extends AppCompatActivity {
 
-    private String TAG = "USER_CLOTHES";
+    private String TAG = "USER CLOTHES";
 
     private EditText mBqtEditText ;
     private Button mPurchaceBtn;

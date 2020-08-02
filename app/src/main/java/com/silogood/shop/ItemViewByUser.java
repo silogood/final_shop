@@ -17,7 +17,7 @@ public class ItemViewByUser extends AppCompatActivity {
     private Button UserClothesBtn;
     private Button UserShoesBtn;
     private Button UserAccBtn;
-    private String TAG = "ItemViewByUser";
+    private String TAG = "ITEM VIEW BY USER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class ItemViewByUser extends AppCompatActivity {
         UserClothesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"CLOTHES CLICK");
+                Log.d(TAG,"USER CLOTHES CLICK");
 
                 Intent intent = new Intent(ItemViewByUser.this , User_Clothes.class);
                 startActivity(intent);
@@ -47,7 +47,7 @@ public class ItemViewByUser extends AppCompatActivity {
         UserShoesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"SHOES CLICK");
+                Log.d(TAG,"USER SHOES CLICK");
 
                 Intent intent = new Intent(ItemViewByUser.this , User_Shoes.class);
                 startActivity(intent);
@@ -61,7 +61,7 @@ public class ItemViewByUser extends AppCompatActivity {
         UserAccBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"ACC CLICK");
+                Log.d(TAG,"USER ACC CLICK");
 
                 Intent intent = new Intent(ItemViewByUser.this , User_Acc.class);
                 startActivity(intent);
@@ -70,10 +70,6 @@ public class ItemViewByUser extends AppCompatActivity {
                 // finish();
             }
         });
-
-
-
-
     }
 
     @Override
