@@ -15,6 +15,8 @@ public class AllNote {
     private int bqt;
     private String timestamp;
 
+    private  String TAG = "ALL NOTE";
+
     public AllNote() {
     }
 

@@ -18,6 +18,7 @@ public class ClothesNote implements Serializable {
     private int bqt;
     private String timestamp;
 
+    private  String TAG = "CLOTHES NOTE";
 
     // Create table SQL query
     public static final String CREATE_TABLE_CLOTHES =

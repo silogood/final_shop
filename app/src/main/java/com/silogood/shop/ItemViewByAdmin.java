@@ -19,7 +19,7 @@ public class ItemViewByAdmin extends AppCompatActivity {
     private Button AdminShoesBtn;
     private Button AdminAccBtn;
     private Button AdminInventoryAllPrintBtn;
-    private String TAG = "ITEMVIEWBYADMIN";
+    private String TAG = "ITEM VIEW BY ADMIN";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class ItemViewByAdmin extends AppCompatActivity {
         AdminClothesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"CLOTHES CLICK");
+                Log.d(TAG,"ADMIN CLOTHES CLICK");
 
                 Intent intent = new Intent(ItemViewByAdmin.this , Admin_Clothes.class);
                 startActivity(intent);
@@ -49,7 +49,7 @@ public class ItemViewByAdmin extends AppCompatActivity {
         AdminShoesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"SHOES CLICK");
+                Log.d(TAG,"ADMIN SHOES CLICK");
 
                 Intent intent = new Intent(ItemViewByAdmin.this , Admin_Shoes.class);
                 startActivity(intent);
@@ -63,7 +63,7 @@ public class ItemViewByAdmin extends AppCompatActivity {
         AdminAccBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"ACC CLICK");
+                Log.d(TAG,"ADMIN ACC CLICK");
 
                 Intent intent = new Intent(ItemViewByAdmin.this , Admin_Acc.class);
                 startActivity(intent);
@@ -77,18 +77,13 @@ public class ItemViewByAdmin extends AppCompatActivity {
         AdminInventoryAllPrintBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"Print All");
+                Log.d(TAG,"ADMIN PRINT ALL CLICK");
 
                 Intent intent = new Intent(ItemViewByAdmin.this , Admin_PrintAll.class);
                 startActivity(intent);
 
             }
         });
-
-
-
-
-
 
     }
 

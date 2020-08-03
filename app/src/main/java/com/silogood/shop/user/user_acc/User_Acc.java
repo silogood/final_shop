@@ -27,7 +27,7 @@ import java.util.List;
 
 public class User_Acc extends AppCompatActivity {
 
-    private String TAG = "USER_ACC";
+    private String TAG = "USER ACC";
 
     private EditText mBqtEditText ;
     private Button mPurchaceBtn;

@@ -20,6 +20,8 @@ public class Shoes_NotesAdapter extends BaseAdapter {
     private ArrayList<ShoesNote> mItemList;
     private int mLayout;
 
+    private  String TAG = "SHOES NOTE ADAPTER";
+
     public Shoes_NotesAdapter(Context context, int layout, ArrayList<ShoesNote> itemList)
     {
         this.mContext = context;

@@ -17,7 +17,7 @@ public class AccNote {
     private String code;
     private int bqt;
     private String timestamp;
-
+    private  String TAG = "ACC NOTE";
 
     // Create table SQL query
     public static final String CREATE_TABLE_ACC =

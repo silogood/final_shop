@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button adminBtn;
     private ActionBar mActionbar;
 
-    private String TAG = "MainActivity";
+    private String TAG = "MAIN Activity";
     private Context mContext;
     //check update
 
@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         init_view();
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
-
-
-
     }
 
 
@@ -56,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         adminBtn = (Button) findViewById(R.id.admin_btn);
         adminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,14 +69,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         mActionbar = getSupportActionBar();
         mActionbar.setTitle(R.string.app_label);
 
-
-
     }
-
 
     @Override
     protected void onResume() {

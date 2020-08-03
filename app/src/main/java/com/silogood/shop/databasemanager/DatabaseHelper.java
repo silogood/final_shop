@@ -22,6 +22,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SHOES = "shoes";
     private static final String ACC = "acc";
 
+    private  String TAG = "DATABASE HELPER";
+
 
     // Database Name
     private static final String DATABASE_NAME = "notes_db";
